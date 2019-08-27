@@ -28,8 +28,11 @@ filetype plugin indent on
 
 " Color Schemes
 colorscheme tender 
-set termguicolors " enables 24-bit color schemes on terminal
+set termguicolors	" enables 24-bit color schemes on terminal
 
 " Python syntax highlighting features
 let python_highlight_all = 1
-
+ 
+" Command-line Autocompletion
+set wildmenu			" enables visual menu for commmand autocompletion
+set wildmode=longest,full	" completes longest string first, then run through the rest of the list

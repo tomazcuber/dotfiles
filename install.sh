@@ -3,13 +3,20 @@
 #--------------------------------------------------------------
 #Create Symbolic Links
 _dir="$PWD"
-ln -sv "$_dir/vim/.vimrc" ~ 
+if [ ! -f "$HOME/.vimrc" ] || [ ! -L "$HOME/.vimrc" ]; then
+	ln -sv "$_dir/vim/.vimrc" ~ 
+else 
+	rm "$HOME/.vimrc"
+	ln -sv "$_dir/vim/.vimrc" ~
+fi
 
 #--------------------------------------------------------------
 #Vim Configuration:
 
 #Install Vundle
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+if [ ! -d "$HOME/.vim/bundle/Vundle.vim" ]; then
+	git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+fi
 
-#Install all plugins in .vimrc:
+#install all plugins in .vimrc:
 vim +PluginInstall +qall
