@@ -20,7 +20,7 @@ call vundle#begin()
 " Plugins
 Plugin 'gmarik/Vundle.vim'
 Plugin 'jacoborus/tender.vim'
-
+Plugin 'tpope/vim-surround'
 
 " Vundle End
 call vundle#end()            
