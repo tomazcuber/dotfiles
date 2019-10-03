@@ -21,7 +21,8 @@ fi
 #YouCompleteMe compilation:
 sudo apt install build-essential cmake python3-dev
 cd "$HOME/.vim/bundle/youcompleteme"
-python3 install.py --all
+#python3 install.py --all
+python3 install.py --clang-completer
 
 #install all plugins in .vimrc:
 vim +PluginInstall +qall
