@@ -21,6 +21,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'jacoborus/tender.vim'
 Plugin 'tpope/vim-surround'
+Plugin 'valloric/youcompleteme'
 
 " Vundle End
 call vundle#end()            
