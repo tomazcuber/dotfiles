@@ -18,5 +18,10 @@ if [ ! -d "$HOME/.vim/bundle/Vundle.vim" ]; then
 	git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 fi
 
+#YouCompleteMe compilation:
+sudo apt install build-essential cmake python3-dev
+cd "$HOME/.vim/bundle/youcompleteme"
+python3 install.py --all
+
 #install all plugins in .vimrc:
 vim +PluginInstall +qall
